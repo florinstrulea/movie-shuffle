@@ -1,14 +1,68 @@
-.title {
-  font-size: 2rem;
-  font-weight: bold;
-  font-family: "Bigshot One", cursive;
-  letter-spacing: 2px;
-  margin: 5rem 0;
+@import url("https://use.typekit.net/oek3jfu.css?ver=1.0.4");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@media screen and (min-width: 1200px) {
+  .page {
+    display: flex;
+    align-items: flex-end;
+  }
+  .page .description {
+    margin-left: 4rem;
+  }
 }
 
-a {
-  text-decoration: none;
-  color: black;
+hr {
+  color: rgba(128, 128, 128, 0.2);
+  height: 5px;
+  opacity: 1;
+  width: 100%;
+}
+
+.description {
+  flex-basis: 100%;
+  font-family: "Poppins";
+}
+.description__year {
+  font-size: 3rem;
+  font-weight: 900;
+  font-family: "paralucent";
+}
+.description__title {
+  font-size: 5rem;
+  font-weight: 700;
+  font-family: "paralucent";
+  margin-bottom: 5rem;
+}
+.description__details {
+  font-family: "paralucent";
+  font-weight: bold;
+}
+
+.image-container {
+  flex-basis: 40%;
+}
+
+.button-container {
+  font-family: "paralucent";
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.1);
+}
+.button-container:hover {
+  background-color: black;
+}
+.button-container:hover .button {
+  color: white;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "paralucent", cursive;
+  margin: 3rem 0;
 }
 
 .container {
@@ -21,8 +75,8 @@ a {
 }
 
 figure {
-  margin: 2rem 0;
-  padding-right: 2rem;
+  margin: 2rem 2rem 2rem 0;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   figure {
@@ -39,19 +93,33 @@ figure {
     width: 18%;
   }
 }
+figure:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(37, 37, 37, 0) 0%, rgba(37, 37, 37, 0) 50%, #252525 100%);
+  z-index: 2;
+}
 
 .caption {
-  padding-left: 2rem;
-  transform: translateY(-180%);
+  position: absolute;
+  bottom: 2%;
+  padding-left: 1rem;
   color: white;
+  z-index: 2;
 }
 .caption__title {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 img {
   width: 100%;
   background-size: cover;
+  z-index: 3;
 }
 
 * {
@@ -64,6 +132,25 @@ html {
 
 body {
   font-size: 1.6rem;
+}
+
+@font-face {
+  font-family: "paralucent";
+  src: url("https://use.typekit.net/af/e3be10/00000000000000003b9ad973/27/l?primer=19e22326407baa22e24dbf97694ecfebb3b5e74ea485d31fd395694769e48f8c&fvd=n5&v=3") format("woff2"), url("https://use.typekit.net/af/e3be10/00000000000000003b9ad973/27/d?primer=19e22326407baa22e24dbf97694ecfebb3b5e74ea485d31fd395694769e48f8c&fvd=n5&v=3") format("woff"), url("https://use.typekit.net/af/e3be10/00000000000000003b9ad973/27/a?primer=19e22326407baa22e24dbf97694ecfebb3b5e74ea485d31fd395694769e48f8c&fvd=n5&v=3") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 500;
+}
+body {
+  padding-bottom: 10rem;
+}
+
+a:link,
+a:active,
+a:focus,
+a:visited {
+  text-decoration: none;
+  color: black;
 }
 
 /*# sourceMappingURL=main.css.map */

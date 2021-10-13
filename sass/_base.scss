@@ -1,0 +1,25 @@
+@import url("https://use.typekit.net/oek3jfu.css?ver=1.0.4");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@font-face {
+	font-family: "paralucent";
+	src: url("https://use.typekit.net/af/e3be10/00000000000000003b9ad973/27/l?primer=19e22326407baa22e24dbf97694ecfebb3b5e74ea485d31fd395694769e48f8c&fvd=n5&v=3")
+			format("woff2"),
+		url("https://use.typekit.net/af/e3be10/00000000000000003b9ad973/27/d?primer=19e22326407baa22e24dbf97694ecfebb3b5e74ea485d31fd395694769e48f8c&fvd=n5&v=3")
+			format("woff"),
+		url("https://use.typekit.net/af/e3be10/00000000000000003b9ad973/27/a?primer=19e22326407baa22e24dbf97694ecfebb3b5e74ea485d31fd395694769e48f8c&fvd=n5&v=3")
+			format("opentype");
+	font-display: auto;
+	font-style: normal;
+	font-weight: 500;
+}
+body {
+	padding-bottom: 10rem;
+}
+a:link,
+a:active,
+a:focus,
+a:visited {
+	text-decoration: none;
+	color: black;
+}

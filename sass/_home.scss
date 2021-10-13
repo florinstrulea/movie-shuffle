@@ -1,15 +1,11 @@
 .title {
-	font-size: 2rem;
+	font-size: 3rem;
 	font-weight: bold;
-	font-family: "Bigshot One", cursive;
-	letter-spacing: 2px;
-	margin: 5rem 0;
+	font-family: "paralucent", cursive;
+
+	margin: 3rem 0;
 }
 
-a {
-	text-decoration: none;
-	color: black;
-}
 .container {
 	width: 80%;
 }
@@ -18,8 +14,9 @@ a {
 	flex-wrap: wrap;
 }
 figure {
-	margin: 2rem 0;
-	padding-right: 2rem;
+	margin: 2rem 2rem 2rem 0;
+
+	position: relative;
 
 	@media screen and (min-width: 768px) {
 		width: 48%;
@@ -30,17 +27,36 @@ figure {
 	@media screen and (min-width: 1200px) {
 		width: 18%;
 	}
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(
+			to bottom,
+			rgba(37, 37, 37, 0) 0%,
+			rgba(37, 37, 37, 0) 50%,
+			rgb(37, 37, 37) 100%
+		);
+		z-index: 2;
+	}
 }
 .caption {
 	&__title {
-		font-size: 2rem;
+		font-size: 1.8rem;
+		font-weight: bold;
 	}
-	padding-left: 2rem;
-	transform: translateY(-180%);
+	position: absolute;
+	bottom: 2%;
+	padding-left: 1rem;
 	color: white;
+	z-index: 2;
 }
 
 img {
 	width: 100%;
 	background-size: cover;
+	z-index: 3;
 }

@@ -11,7 +11,7 @@ function minuteToHours($film)
 function frenchDate($film)
 {
     $timestamp = strtotime($film["releaseDate"]);
-    $release = date("d/m/y", $timestamp);
+    $release = date("d/m/Y", $timestamp);
     return $release;
 }
 ?>
@@ -25,17 +25,23 @@ if (isset($_GET["id"])) {
         $duration = minuteToHours($movie);
         $releaseDate = frenchDate($movie);
         if ($movie["id"] == $_GET["id"]) { ?>
-            <div class="image-container col-xl-6">
-                <img src="img/poster/<?= $movieEdit["title"] . "." . "jpg" ?>" alt="">
+            <div class="page">
+                <div class="image-container">
+                    <img src="img/poster/<?= $movieEdit["title"] . "." . "jpg" ?>" alt="">
+                </div>
+                <div class="description">
+                    <p class="description__year"><?= substr($movie["releaseDate"], 0, 4) ?></p>
+                    <h1 class="description__title"><?= $movie["title"] ?></h1>
+                    <p class="description__description"><?= $movie["description"] ?></p>
+                    <p class="description__genre"><?= implode(", ", $movie["genres"]) ?></p>
+                    <p class="description__details"><span class="description__duration"><?= $duration ?> - </span><span class="description__release"><?= $releaseDate ?></span></p>
+                    <div class="button-container">
+                        <a href="<?= $movie["video"] ?>" class="button">Bande Annonce</a>
+                    </div>
+
+                </div>
             </div>
-            <div class="description">
-                <p class="description__year"><?= substr($movie["releaseDate"], 0, 4) ?></p>
-                <h1 class="description__title"><?= $movie["title"] ?></h1>
-                <p class="description__description"><?= $movie["description"] ?></p>
-                <p class="description__genre"><?= implode(", ", $movie["genres"]) ?></p>
-                <p class="description__details"><span class="description__duration"><?= $duration ?> - </span><span class="description__release"><?= $releaseDate ?></span></p>
-                <a href="<?= $movie["video"] ?>" class="button">Bande Annonce</a>
-            </div>
+
 <?php
         }
     }

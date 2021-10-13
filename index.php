@@ -11,14 +11,18 @@ include("templates/header.php");
 foreach ($movies as $movie) {
     $movieEdit = spaceToDash($movie);
 ?> <figure class="image">
+
+        <img src="img/poster/<?= $movieEdit["title"] . "." . "jpg" ?>" alt="">
+
+        <div class="gradient"></div>
         <a href="movie.php?id=<?= $movie["id"] ?>">
-            <img src="img/poster/<?= $movieEdit["title"] . "." . "jpg" ?>" alt="">
+            <figcaption class="caption">
+                <h2 class="caption__title"><?= $movie["title"] ?></h2>
+                <p class="caption__description"><?= implode(", ", $movie["genres"]) ?></p>
+            </figcaption>
         </a>
     </figure>
-    <figcaption class="caption">
-        <h2 class="caption__title"><?= $movie["title"] ?></h2>
-        <p class="caption__description"><?= implode(", ", $movie["genres"]) ?></p>
-    </figcaption>
+
 
 
 

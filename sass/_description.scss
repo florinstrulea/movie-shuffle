@@ -1,0 +1,56 @@
+.page {
+	@media screen and (min-width: 1200px) {
+		display: flex;
+		align-items: flex-end;
+		.description {
+			margin-left: 4rem;
+		}
+	}
+}
+hr {
+	color: rgba(128, 128, 128, 0.2);
+	height: 5px;
+	opacity: 1;
+	width: 100%;
+}
+.description {
+	flex-basis: 100%;
+	font-family: "Poppins";
+
+	&__year {
+		font-size: 3rem;
+		font-weight: 900;
+		font-family: "paralucent";
+	}
+	&__title {
+		font-size: 5rem;
+		font-weight: 700;
+		font-family: "paralucent";
+		margin-bottom: 5rem;
+	}
+	&__details {
+		font-family: "paralucent";
+		font-weight: bold;
+	}
+}
+.image-container {
+	flex-basis: 40%;
+}
+
+.button-container {
+	font-family: "paralucent";
+	display: flex;
+	justify-content: center;
+	margin-top: 5rem;
+	font-size: 2rem;
+	font-weight: bold;
+	border-radius: 5px;
+	border: 1px solid rgba(128, 128, 128, 0.1);
+	&:hover {
+		background-color: black;
+
+		.button {
+			color: white;
+		}
+	}
+}
