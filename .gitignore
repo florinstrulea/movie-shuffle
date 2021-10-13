@@ -3,8 +3,7 @@
 
 ### Node ###
 # Logs
-*.png
-*.jpg
+
 logs
 *.log
 npm-debug.log*
