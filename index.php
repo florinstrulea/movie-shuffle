@@ -1,15 +1,7 @@
 <?php
 $json = file_get_contents("movies.json");
 $movies = json_decode($json, true);
-$movieDescription;
-function spaceToDash($film)
-{
-    strtolower($film["title"]);
-    if (str_contains($film["title"], " ")) {
-        $film["title"] = str_ireplace(" ", "-", $film["title"]);
-    }
-    return $film;
-}
+include("templates/functionPicture.php");
 include("templates/header.php");
 ?>
 
