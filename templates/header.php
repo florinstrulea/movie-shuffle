@@ -20,4 +20,3 @@
         </a>
     </div>
     <div class="container movies">
-        <div class="row">

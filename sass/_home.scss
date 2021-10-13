@@ -10,20 +10,34 @@ a {
 	text-decoration: none;
 	color: black;
 }
-
-.image-container {
-	position: relative;
-	width: 95%;
+.container {
+	width: 80%;
+}
+.movies {
+	display: flex;
+	flex-wrap: wrap;
+}
+figure {
 	margin: 2rem 0;
+	padding-right: 2rem;
+
+	@media screen and (min-width: 768px) {
+		width: 48%;
+	}
+	@media screen and (min-width: 992px) {
+		width: 31%;
+	}
+	@media screen and (min-width: 1200px) {
+		width: 18%;
+	}
 }
 .caption {
 	&__title {
-		font-size: 3rem;
+		font-size: 2rem;
 	}
-	// position: absolute;
-	// bottom: 10%;
-	// left: 10%;
-	// color: red;
+	padding-left: 2rem;
+	transform: translateY(-180%);
+	color: white;
 }
 
 img {

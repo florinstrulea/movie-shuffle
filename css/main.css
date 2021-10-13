@@ -11,14 +11,42 @@ a {
   color: black;
 }
 
-.image-container {
-  position: relative;
-  width: 95%;
-  margin: 2rem 0;
+.container {
+  width: 80%;
 }
 
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+figure {
+  margin: 2rem 0;
+  padding-right: 2rem;
+}
+@media screen and (min-width: 768px) {
+  figure {
+    width: 48%;
+  }
+}
+@media screen and (min-width: 992px) {
+  figure {
+    width: 31%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  figure {
+    width: 18%;
+  }
+}
+
+.caption {
+  padding-left: 2rem;
+  transform: translateY(-180%);
+  color: white;
+}
 .caption__title {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 img {
