@@ -1,3 +1,31 @@
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Bigshot One", cursive;
+  letter-spacing: 2px;
+  margin: 5rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.image-container {
+  position: relative;
+  width: 95%;
+  margin: 2rem 0;
+}
+
+.caption__title {
+  font-size: 3rem;
+}
+
+img {
+  width: 100%;
+  background-size: cover;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,10 +36,6 @@ html {
 
 body {
   font-size: 1.6rem;
-}
-
-img {
-  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
