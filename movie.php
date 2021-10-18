@@ -18,8 +18,12 @@ function frenchDate($film)
 <hr>
 <?php
 if (isset($_GET["id"])) {
-    $json = file_get_contents("movies.json");
-    $movies = json_decode($json, true);
+    $dsn = "mysql:host=localhost;dbname=mymovies";
+    $db = new PDO($dsn, "root");
+    $query = $db->prepare("SELECT * FROM movies");
+    $query->execute();
+    $movies = $query->fetchAll(PDO::FETCH_ASSOC);
+
     foreach ($movies as $movie) {
         $movieEdit = spaceToDash($movie);
         $duration = minuteToHours($movie);
@@ -33,7 +37,7 @@ if (isset($_GET["id"])) {
                     <p class="description__year"><?= substr($movie["releaseDate"], 0, 4) ?></p>
                     <h1 class="description__title"><?= $movie["title"] ?></h1>
                     <p class="description__description"><?= $movie["description"] ?></p>
-                    <p class="description__genre"><?= implode(", ", $movie["genres"]) ?></p>
+                    <p class="description__genre"><?= $movie["genres"] ?></p>
                     <p class="description__details"><span class="description__duration"><?= $duration ?> - </span><span class="description__release"><?= $releaseDate ?></span></p>
                     <div class="button-container">
                         <a href="<?= $movie["video"] ?>" class="button">Bande Annonce</a>
