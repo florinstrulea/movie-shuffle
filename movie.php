@@ -29,7 +29,7 @@ if (isset($_GET["id"])) {
         $duration = minuteToHours($movie);
         $releaseDate = frenchDate($movie);
         if ($movie["id"] == $_GET["id"]) { ?>
-            <div class="page">
+            <div class="page container">
                 <div class="image-container">
                     <img src="img/poster/<?= $movieEdit["title"] . "." . "jpg" ?>" alt="">
                 </div>
